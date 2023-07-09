@@ -2,9 +2,11 @@ package com.example.foodapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
-import android.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.foodapp.SQL.DBHelper;
 
@@ -24,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         dbHelper = new DBHelper(this);
         login =(Button) findViewById(R.id.btnLogin);
-        toolbar = (Toolbar) findViewById(R.id.tool_main);
+        //toolbar = (Toolbar) findViewById(R.id.tool_main);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

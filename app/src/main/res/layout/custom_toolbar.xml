@@ -5,18 +5,18 @@
     android:layout_height="wrap_content"
     android:background="@drawable/background_main"
     android:elevation="4dp"
-    android:gravity="center"
-    >
+    android:gravity="center">
 
     <TextView
+        android:id="@+id/tool_main"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/SetTitle_main"
+        android:layout_gravity="center"
+        android:foregroundGravity="center"
+        android:gravity="center"
         android:text="Code Bun"
         android:textSize="25dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:foregroundGravity="center"
         android:textStyle="bold"
         tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

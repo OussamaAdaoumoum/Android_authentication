@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".SignUp">
 
-
     <ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        tools:ignore="MissingConstraints">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -86,6 +86,33 @@
                 android:padding="20dp"
                 android:drawableStart="@drawable/ic_lock"
                 />
+
+            <!-- Add a RadioGroup to contain the role selection -->
+            <RadioGroup
+                android:id="@+id/roleRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <!-- Add a RadioButton for the client role -->
+                <RadioButton
+                    android:id="@+id/clientRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Client"
+                    android:checked="true"
+                    android:layout_weight="1"/>
+
+                <!-- Add a RadioButton for the restaurant role -->
+                <RadioButton
+                    android:id="@+id/restaurantRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Restaurant"
+                    android:layout_weight="1"/>
+            </RadioGroup>
+
             <Button
                 android:id="@+id/btnSignUpAcc"
                 android:layout_width="250dp"
@@ -97,6 +124,7 @@
                 android:text="Sign up"
                 android:textColor="#1B1515"
                 android:textSize="18sp"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

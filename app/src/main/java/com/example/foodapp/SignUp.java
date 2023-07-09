@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,7 +16,9 @@ import com.example.foodapp.SQL.DBHelper;
 public class SignUp extends AppCompatActivity {
     EditText name , number , email,pass;
     TextView login;
+    RadioButton clientRadioButton, restaurantRadioButton;
     DBHelper dbHelper;
+    Button signUpAcc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +29,11 @@ public class SignUp extends AppCompatActivity {
         number=findViewById(R.id.textNumber);
         email=findViewById(R.id.textEmail);
         pass=findViewById(R.id.textPass);
-        Button signUpAcc = findViewById(R.id.btnSignUpAcc);
+        clientRadioButton = findViewById(R.id.clientRadioButton);
+        restaurantRadioButton = findViewById(R.id.restaurantRadioButton);
+        signUpAcc = findViewById(R.id.btnSignUpAcc);
         dbHelper = new DBHelper(this);
+
 
         signUpAcc.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,7 +42,9 @@ public class SignUp extends AppCompatActivity {
                 String number1 = number.getText().toString();
                 String email1 = email.getText().toString();
                 String pass1 = pass.getText().toString();
-                boolean b =dbHelper.insetUserData(name1,number1,email1,pass1);
+                String role = clientRadioButton.isChecked() ? "Client" : "Restaurant";
+
+                boolean b =dbHelper.insetUserData(name1,number1,email1,pass1,role);
                 if (b){
                     Toast.makeText(SignUp.this,"Data inserted",Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(SignUp.this,Login.class);
