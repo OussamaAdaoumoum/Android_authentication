@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <include layout="@layout/toolbar"
+    <include layout="@layout/custom_toolbar"
         android:id="@+id/tool_main"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,6 +36,7 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_view"
             android:fontFamily="sans-serif-black"
             android:padding="10dp"
             android:text="Login"
@@ -46,19 +47,11 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_view"
             android:fontFamily="sans-serif-black"
             android:padding="10dp"
             android:text="Sign Up"
             android:textColor="#1B1515"
             android:textSize="18sp" />
     </LinearLayout>
-
-
-
-
-
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toolbar;
 
+import com.example.foodapp.SQL.DBHelper;
+
 public class MainActivity extends AppCompatActivity {
 
     Button login,Reg;
